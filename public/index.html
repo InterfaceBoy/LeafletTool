@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script> -->
+    <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
+    <title>北京市东城区网格综合评价与监测预警系统</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      em,
+      i {
+        font-style: normal;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      img {
+        border: 0;
+        vertical-align: middle;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script>
+    /**
+     * 根据基础字体大小 和 效果图宽度设置 根节点字体大小
+     * @param baseFontSize 浏览器默认字体大小 [注]浏览器最小字体为12像素，所以该值必需大于等于12
+     * @param baseWidth 设计稿的尺寸
+     */
+    function initFontSize(baseFontSize, baseWidth) {
+      // 获取当前屏幕宽度
+      var clientWidth =
+        document.documentElement.clientWidth || window.innerWidth;
+      // 根据宽度计算根节点字体大小
+      var size = Math.floor((clientWidth / baseWidth) * baseFontSize);
+      document.querySelector("html").style.fontSize = size + "px";
+    }
+    // 初始化 字体100px , 设计稿宽640px
+    initFontSize(19.2, 1920);
+  </script>
+</html>
